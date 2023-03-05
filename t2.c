@@ -12,8 +12,7 @@ SWITCH (5){
                 PRINT(8);
             DEFAULT:
                 PRINT(11);
-                BREAK;
-                SWITCH (12){
+                SWITCH (19){
                     CASE 19:
                         PRINT(19);
                         BREAK;

@@ -18,3 +18,6 @@ void free_vec(struct Vec* vec);
 
 //Увеличить внутренний массив в соответствии с коэффициентом
 int resize_vec(struct Vec* vec);
+
+//Извлечь элемент с позиции pos
+struct Node* pop_from_pos(struct Vec* vec, int pos);

@@ -4,7 +4,7 @@ SWITCH (5){
         PRINT(3);
         BREAK;
     CASE 5:
-        SWITCH (8){
+        SWITCH (9){
             CASE 9:
                 PRINT(9);
                 BREAK;
