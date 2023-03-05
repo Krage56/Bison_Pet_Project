@@ -4,7 +4,7 @@
 #include <stdlib.h>
 int addChild(struct Node* node, struct Node* child){
     if (node->children == NULL){
-        node->children = malloc(sizeof(struct Vec));       
+        node->children = initVec();       
     }
     push_back(node->children, child);
     child->parent = node;
