@@ -23,7 +23,7 @@ void push_back(struct Vec* v, struct Node* data){
     if (v->_size + 1 == v->_cap){
         resize_vec(v);
     }
-    v->data[v->_size] = malloc(sizeof(struct Node));
+    v->data[v->_size] = data;
     v->_size += 1;
 }
 
