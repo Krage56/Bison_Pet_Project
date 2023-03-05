@@ -23,12 +23,10 @@ void delBranch(struct Node* victim){
     struct Node* cur_node;
     while (queue->_size != 0){
         cur_node = pop_from_pos(queue, 0);
-        printf("I'll kill node %p\n", (void*)cur_node);
         while(cur_node->children->_size != 0){
             push_back(queue, pop_back(cur_node->children));
         }
         free_vec(cur_node->children);
-        printf("Object on %p with type %d and data %d have been freed\n", (void*)(cur_node), cur_node->type, cur_node->data);
         free(cur_node);
     }
 }
@@ -39,7 +37,6 @@ void printResultFromAST(struct Node* root){
     struct Node* cur_node;
     while (stack->_size != 0){
         cur_node = pop_back(stack);
-        printf("cur_node (%p) has %d children and type %d\n", (void*)cur_node, cur_node->children->_size, cur_node->type);
         while(cur_node->children->_size != 0){
             push_back(stack, pop_from_pos(cur_node->children, 0));
         }

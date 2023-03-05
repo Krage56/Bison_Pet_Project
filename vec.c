@@ -29,12 +29,9 @@ void push_back(struct Vec* v, struct Node* data){
 
 void free_vec(struct Vec* vec){
     for (int i = 0; i < vec->_size; ++i){
-        printf("Object on %p with type %d and data %d have been freed\n", (void*)(vec->data[i]), vec->data[i]->type, vec->data[i]->data);
         free(vec->data[i]);
     }
-    printf("Object on %p have been freed\n", (void*)(vec->data));
     free(vec->data);
-    printf("Object on %p have been freed\n", (void*)(vec));
     free(vec);
 }
 
